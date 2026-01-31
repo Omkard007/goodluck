@@ -5,22 +5,23 @@ import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { ProductCard } from './ProductCard'
 
+
 const menuItems = {
   classics: [
     {
-      image: '/images/irani-chai.jpg',
+      imageUrl: '/images/irani-chai.jpg',
       name: 'Irani Chai',
       description: 'The signature blend with rich spiced flavors',
       price: '₹20',
     },
     {
-      image: '/images/bun-maska.jpg',
+      imageUrl: '/images/bun-maska.jpg',
       name: 'Bun Maska',
       description: 'Warm bun with creamy melted butter',
       price: '₹30',
     },
     {
-      image: '/images/doodh-pav.jpg',
+      imageUrl: '/images/doodh-pav.jpg',
       name: 'Doodh Pav',
       description: 'Sweet creamy milk with soft bread',
       price: '₹25',
@@ -28,19 +29,19 @@ const menuItems = {
   ],
   seasonal: [
     {
-      image: '/images/irani-chai.jpg',
+      imageUrl: '/images/irani-chai.jpg',
       name: 'Masala Chai',
       description: 'Chai with extra spices and warmth',
       price: '₹25',
     },
     {
-      image: '/images/bun-maska.jpg',
+      imageUrl: '/images/bun-maska.jpg',
       name: 'Toasted Bun',
       description: 'Extra crispy bun with golden butter',
       price: '₹35',
     },
     {
-      image: '/images/featured-chai-cup.jpg',
+      imageUrl: '/images/featured-chai-cup.jpg',
       name: 'Chai Latte',
       description: 'Rich chai with frothy milk on top',
       price: '₹40',
@@ -48,19 +49,19 @@ const menuItems = {
   ],
   specialty: [
     {
-      image: '/images/featured-chai-cup.jpg',
+      imageUrl: '/images/featured-chai-cup.jpg',
       name: 'Royal Chai',
       description: 'Premium blend with cardamom and cream',
       price: '₹50',
     },
     {
-      image: '/images/doodh-pav.jpg',
+      imageUrl: '/images/doodh-pav.jpg',
       name: 'Badam Milk',
       description: 'Almond milk with special spices',
       price: '₹45',
     },
     {
-      image: '/images/irani-chai.jpg',
+      imageUrl: '/images/irani-chai.jpg',
       name: 'Heritage Blend',
       description: 'Traditional recipe from our archives',
       price: '₹55',
@@ -106,7 +107,7 @@ export function MenuShowcaseSection() {
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-muted">Our mission</h2>
 
           {/* Tabs */}
-          <div className="flex gap-8">
+          <div className="flex gap-8 ">
             {categories.map((category) => (
               <button
                 key={category.id}
@@ -124,7 +125,8 @@ export function MenuShowcaseSection() {
         </motion.div>
 
         {/* Carousel */}
-        <div className="relative">
+        
+
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -140,28 +142,14 @@ export function MenuShowcaseSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex-shrink-0 w-full sm:w-96 snap-center"
+                className="mx-auto"
               >
                 <ProductCard {...item} />
               </motion.div>
             ))}
           </motion.div>
 
-          {/* Navigation buttons */}
-          <button
-            onClick={() => scroll('left')}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 z-10 p-2 bg-accent/80 text-foreground rounded-full hover:bg-accent transition-colors"
-          >
-            <ChevronLeft size={24} />
-          </button>
-          <button
-            onClick={() => scroll('right')}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 z-10 p-2 bg-accent/80 text-foreground rounded-full hover:bg-accent transition-colors"
-          >
-            <ChevronRight size={24} />
-          </button>
         </div>
-      </div>
     </section>
   )
 }
