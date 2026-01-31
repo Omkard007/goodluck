@@ -1,5 +1,5 @@
 'use client'
-
+import Navbar from "../home/navbar2"
 import { motion } from 'framer-motion'
 import { MapPin, Clock, Phone, Mail } from 'lucide-react'
 import Cta from "../home/cta"
@@ -21,9 +21,10 @@ const staggerContainer = {
 
 export default function ContactPage() {
     return (
-        <div className="absolute inset-0 z-0">
-
-
+        <div className="relative inset-0 z-0">
+            <div className="relative bg-secondary">
+            <Navbar />
+            
             {/* Page Header */}
             <section className=" md:py-16 px-4 lg:py-30 bg-secondary gap-3">
                 <div className="max-w-6xl mx-auto text-center">
@@ -213,7 +214,8 @@ export default function ContactPage() {
             </section>
 
             {/* Contact Form */}
-
+            </div>
+            <Cta />
         </div>
     )
 }

@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { ProductCard } from './ProductCard'
 
 
@@ -94,7 +93,7 @@ export function MenuShowcaseSection() {
   }
 
   return (
-    <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-secondary">
+    <section className="py-2 md:py-10 px-4 sm:px-6  bg-secondary">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -102,7 +101,7 @@ export function MenuShowcaseSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col md:flex-row md:items-center md:justify-between mb-12 gap-8"
+          className="flex flex-col md:flex-row md:items-center md:justify-between mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-muted">Our mission</h2>
 
@@ -133,7 +132,7 @@ export function MenuShowcaseSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             id="menu-carousel"
-            className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide"
+            className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide"
           >
             {items.map((item, index) => (
               <motion.div

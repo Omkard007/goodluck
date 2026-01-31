@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Heart, BookOpen, Users, Coffee } from "lucide-react";
-
+import Navbar from "../home/navbar2"
+import Cta from "../home/cta";
 const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -21,6 +22,8 @@ const staggerContainer = {
 export default function AboutPage() {
     return (
         <div className="relative">
+             <div className="relative bg-secondary">
+             <Navbar />
             {/* Page Header */}
             <section className="py-12 md:py-16 px-4 lg:py-30 bg-secondary ">
                 <div className="max-w-6xl mx-auto text-center">
@@ -213,6 +216,8 @@ export default function AboutPage() {
                     </motion.div>
                 </div>
             </section>
+            </div>
+            <Cta />
         </div>
     )
 }

@@ -16,7 +16,7 @@ export function ProductCard({
   price,
 }: ProductCardProps) {
   return (
-    <div className="relative flex h-[40rem] items-center justify-center">
+    <div className="relative flex h-[30rem] items-center justify-center">
       <DirectionAwareHover imageUrl={imageUrl}>
         <div className="text-center">
           <h3 className="text-xl font-bold">{name}</h3>

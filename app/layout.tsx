@@ -2,9 +2,7 @@ import React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
-import Navbar from "../components/home/Navbar"
 import { Footer } from "../components/home/Footer"
-import  Cta  from "../components/home/cta"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
@@ -24,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col font-sans antialiased">
-        <Navbar />
+      
 
         {/* MAIN CONTENT PUSHES FOOTER DOWN */}
         <main className="flex-1">
@@ -32,7 +30,7 @@ export default function RootLayout({
         </main>
 
         <Analytics />
-        <Cta />
+        
         <Footer />
       </body>
     </html>
