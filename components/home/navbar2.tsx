@@ -27,7 +27,7 @@ export default function GoodluckCafeNavbar() {
   ];
 
   return (
-    <Navbar className="top-0">
+    <Navbar className="top-2">
       {/* ================= DESKTOP ================= */}
       <NavBody>
         {/* Logo */}

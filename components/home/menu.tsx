@@ -51,13 +51,13 @@ export default function MenuPage() {
 
       {/* Page Header */}
       <section className="py-12 md:py-16 px-4 bg-secondary">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center min-h-[40vh] flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-serif font-bold text-background mb-4 text-balance">
+            <h1 className="text-5xl md:text-6xl font-serif font-bold text-background mb-4 text-balance drop-shadow-xs drop-shadow-black">
               Our Menu
             </h1>
             <p className="text-lg text-background/70 max-w-2xl mx-auto">
@@ -143,11 +143,12 @@ export default function MenuPage() {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {filteredItems.length > 0 ? (
-              filteredItems.map((item) => (
+              filteredItems.map((item,idx) => (
                 <motion.div
                   key={item.id}
-                  variants={fadeInUp}
-                  whileHover={{ y: -4 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.05 * idx ,duration:0.3}}
                   className="bg-card rounded-lg p-6 border border-border hover:shadow-lg hover:border-primary/30 transition-all"
                 >
                   <div className="flex items-start justify-between mb-4">
@@ -179,9 +180,6 @@ export default function MenuPage() {
 
                   <div className="flex items-center justify-between pt-4 border-t border-border">
                     <div className="text-2xl font-serif font-bold text-primary">₹{item.price}</div>
-                    <button className="px-4 py-2 bg-primary/10 text-primary rounded-lg font-medium hover:bg-primary hover:text-primary-foreground transition-colors text-sm">
-                      Add
-                    </button>
                   </div>
                 </motion.div>
               ))

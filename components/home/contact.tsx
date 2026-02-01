@@ -26,14 +26,14 @@ export default function ContactPage() {
             <Navbar />
             
             {/* Page Header */}
-            <section className=" md:py-16 px-4 lg:py-30 bg-secondary gap-3">
-                <div className="max-w-6xl mx-auto text-center">
+            <section className=" py-12 md:py-16 px-4 bg-secondary">
+                <div className="max-w-6xl mx-auto text-center min-h-[40vh] flex items-center justify-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h1 className="text-5xl md:text-6xl font-serif font-bold text-background mb-4 text-balance">
+                        <h1 className="text-5xl md:text-6xl font-serif font-bold text-background mb-4 text-balance drop-shadow-xs drop-shadow-black">
                             Visit Us
                         </h1>
                         <p className="text-lg text-background/70 max-w-2xl mx-auto">
@@ -52,15 +52,7 @@ export default function ContactPage() {
                         transition={{ duration: 0.6 }}
                         className="rounded-lg overflow-hidden border border-border h-96 md:h-[500px] shadow-lg"
                     >
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.0256252577356!2d73.84127532346896!3d18.534893267289046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0c7c7c7c7c7%3A0x0!2sGoodluck%20Cafe!5e0!3m2!1sen!2sin!4v1234567890"
-                            width="100%"
-                            height="100%"
-                            style={{ border: 0 }}
-                            allowFullScreen
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                        ></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.256376094627!2d73.8414923!3d18.517313100000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf87fad7cce1%3A0x782ac3a113379b17!2sCafe%20Goodluck!5e0!3m2!1sen!2sin!4v1769936389613!5m2!1sen!2sin" width="600" height="450" className="w-full h-full" allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </motion.div>
                 </div>
             </section>

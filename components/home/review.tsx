@@ -21,87 +21,87 @@ const staggerContainer = {
   },
 }
 
+const reviews = [
+  {
+    id: 1,
+    author: 'Aditi M.',
+    rating: 5,
+    date: '2024',
+    text: 'The Irani chai here is incomparable. It\'s like a warm hug in a cup. Goodluck Cafe is not just about food, it\'s about feeling at home.',
+    highlight: 'Signature Chai',
+  },
+  {
+    id: 2,
+    author: 'Rajesh P.',
+    rating: 5,
+    date: '2024',
+    text: 'I\'ve been coming here for 20 years. Every visit is the same—warm, welcoming, and the Bun Maska is still as good as the first day I had it.',
+    highlight: 'Legacy & Consistency',
+  },
+  {
+    id: 3,
+    author: 'Priya N.',
+    rating: 5,
+    date: '2024',
+    text: 'Brought my parents here and they felt the same magic I felt as a child. That\'s what Goodluck is—a connection across generations.',
+    highlight: 'Family Memories',
+  },
+  {
+    id: 4,
+    author: 'Vikram S.',
+    rating: 5,
+    date: '2024',
+    text: 'The staff knows every regular by name. The prices are honest, the food is authentic, and the atmosphere is priceless.',
+    highlight: 'Genuine Warmth',
+  },
+  {
+    id: 5,
+    author: 'Anjali K.',
+    rating: 5,
+    date: '2024',
+    text: 'In a world of trendy cafes, Goodluck remains beautifully simple. Every item tells the story of Pune\'s food culture.',
+    highlight: 'Authenticity',
+  },
+  {
+    id: 6,
+    author: 'Sanjay D.',
+    rating: 5,
+    date: '2024',
+    text: 'A place where time slows down. Where conversations matter more than WiFi. Where you\'re not just a customer, you\'re family.',
+    highlight: 'Community',
+  },
+  {
+    id: 7,
+    author: 'Meera J.',
+    rating: 5,
+    date: '2024',
+    text: 'The Dosa is perfectly crisp, the Samosa melts in your mouth, and the chai is eternal. Goodluck Cafe is Pune\'s heartbeat.',
+    highlight: 'Signature Items',
+  },
+  {
+    id: 8,
+    author: 'Arun C.',
+    rating: 5,
+    date: '2024',
+    text: 'Decades of excellence packed into a humble café. This is what real hospitality looks like.',
+    highlight: 'Excellence',
+  },
+]
 export default function ReviewsPage() {
-  const reviews = [
-    {
-      id: 1,
-      author: 'Aditi M.',
-      rating: 5,
-      date: '2024',
-      text: 'The Irani chai here is incomparable. It\'s like a warm hug in a cup. Goodluck Cafe is not just about food, it\'s about feeling at home.',
-      highlight: 'Signature Chai',
-    },
-    {
-      id: 2,
-      author: 'Rajesh P.',
-      rating: 5,
-      date: '2024',
-      text: 'I\'ve been coming here for 20 years. Every visit is the same—warm, welcoming, and the Bun Maska is still as good as the first day I had it.',
-      highlight: 'Legacy & Consistency',
-    },
-    {
-      id: 3,
-      author: 'Priya N.',
-      rating: 5,
-      date: '2024',
-      text: 'Brought my parents here and they felt the same magic I felt as a child. That\'s what Goodluck is—a connection across generations.',
-      highlight: 'Family Memories',
-    },
-    {
-      id: 4,
-      author: 'Vikram S.',
-      rating: 5,
-      date: '2024',
-      text: 'The staff knows every regular by name. The prices are honest, the food is authentic, and the atmosphere is priceless.',
-      highlight: 'Genuine Warmth',
-    },
-    {
-      id: 5,
-      author: 'Anjali K.',
-      rating: 5,
-      date: '2024',
-      text: 'In a world of trendy cafes, Goodluck remains beautifully simple. Every item tells the story of Pune\'s food culture.',
-      highlight: 'Authenticity',
-    },
-    {
-      id: 6,
-      author: 'Sanjay D.',
-      rating: 5,
-      date: '2024',
-      text: 'A place where time slows down. Where conversations matter more than WiFi. Where you\'re not just a customer, you\'re family.',
-      highlight: 'Community',
-    },
-    {
-      id: 7,
-      author: 'Meera J.',
-      rating: 5,
-      date: '2024',
-      text: 'The Dosa is perfectly crisp, the Samosa melts in your mouth, and the chai is eternal. Goodluck Cafe is Pune\'s heartbeat.',
-      highlight: 'Signature Items',
-    },
-    {
-      id: 8,
-      author: 'Arun C.',
-      rating: 5,
-      date: '2024',
-      text: 'Decades of excellence packed into a humble café. This is what real hospitality looks like.',
-      highlight: 'Excellence',
-    },
-  ]
 
   return (
     <div className="relative">
          <div className="relative bg-secondary">
          <Navbar />
       {/* Page Header */}
-      <section className="py-12 md:py-16 px-4 lg:py-30 bg-secondary">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="py-12 md:py-16 px-4 bg-secondary">
+        <div className="max-w-6xl mx-auto text-center min-h-[40vh] flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-serif font-bold text-background mb-4 text-balance">
+            <h1 className="text-5xl md:text-6xl font-serif font-bold text-background mb-4 text-balance drop-shadow-xs drop-shadow-black">
               What People Say
             </h1>
             <p className="text-lg text-background/70 max-w-2xl mx-auto">

@@ -25,14 +25,14 @@ export default function AboutPage() {
              <div className="relative bg-secondary">
              <Navbar />
             {/* Page Header */}
-            <section className="py-12 md:py-16 px-4 lg:py-30 bg-secondary ">
-                <div className="max-w-6xl mx-auto text-center">
+            <section className="py-12 md:py-16 px-4 bg-secondary">
+                <div className="max-w-6xl mx-auto text-center min-h-[40vh] flex items-center justify-center ">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h1 className="text-5xl md:text-6xl font-serif font-bold text-background mb-4">
+                        <h1 className="text-5xl md:text-6xl font-serif font-bold text-background mb-4 drop-shadow-xs drop-shadow-black">
                             Our Story
                         </h1>
                         <p className="text-lg text-background/70 max-w-2xl mx-auto">
