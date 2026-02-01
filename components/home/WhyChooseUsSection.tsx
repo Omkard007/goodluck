@@ -47,7 +47,7 @@ const itemVariants = {
 export function WhyChooseUsSection() {
   return (
     <section className=" md:py-32 px-4 sm:px-6 lbg-muted">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

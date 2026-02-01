@@ -1,11 +1,6 @@
 "use client";
 
-import React, {
-  createContext,
-  useContext,
-  useRef,
-  useState,
-} from "react";
+import React, { createContext, useContext, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import {
@@ -71,15 +66,12 @@ export const NavBody = ({
     <motion.div
       animate={{
         backdropFilter: visible ? "blur(10px)" : "none",
-        backgroundColor: visible
-          ? "rgba(255,255,255,0.85)"
-          : "transparent",
-        boxShadow: visible
-          ? "0 10px 30px rgba(0,0,0,0.08)"
-          : "none",
+        backgroundColor: visible ? "rgba(255,255,255,0.85)" : "transparent",
+        boxShadow: visible ? "0 10px 30px rgba(0,0,0,0.08)" : "none",
         y: visible ? 20 : 0,
+        width: visible ? "76rem" : "80rem",
       }}
-      transition={{ type: "spring", stiffness: 200, damping: 40 }}
+      transition={{ type: "spring", stiffness: 200, damping: 40,duration:0.3 }}
       className={cn(
         "relative z-50 mx-auto hidden max-w-7xl items-center justify-between rounded-full px-4 py-2 lg:flex",
         className,

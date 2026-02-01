@@ -86,7 +86,7 @@ export function MenuShowcaseSection() {
 
   return (
     <section className="py-2 md:py-10 px-4 sm:px-6  bg-secondary">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
