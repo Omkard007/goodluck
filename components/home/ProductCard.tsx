@@ -16,12 +16,12 @@ export function ProductCard({
   price,
 }: ProductCardProps) {
   return (
-    <div className="relative flex h-[30rem] items-center justify-center">
+    <div className="relative flex w-full aspect-square items-center justify-center p-4">
       <DirectionAwareHover imageUrl={imageUrl}>
         <div className="text-center">
-          <h3 className="text-xl font-bold">{name}</h3>
-          <p className="mt-2 text-sm">{description}</p>
-          <p className="mt-1 text-base font-semibold">{price}</p>
+          <h3 className="text-lg sm:text-xl font-bold">{name}</h3>
+          <p className="mt-1 sm:mt-2 text-xs sm:text-sm">{description}</p>
+          <p className="mt-1 text-sm sm:text-base font-semibold">{price}</p>
         </div>
       </DirectionAwareHover>
     </div>

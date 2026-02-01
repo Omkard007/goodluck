@@ -72,7 +72,7 @@ type Category = 'classics' | 'seasonal' | 'specialty'
 
 export function MenuShowcaseSection() {
   const [activeCategory, setActiveCategory] = useState<Category>('classics')
-  const [scrollPosition, setScrollPosition] = useState(0)
+
 
   const categories: { id: Category; label: string }[] = [
     { id: 'classics', label: 'Classics' },
@@ -82,15 +82,7 @@ export function MenuShowcaseSection() {
 
   const items = menuItems[activeCategory]
 
-  const scroll = (direction: 'left' | 'right') => {
-    const container = document.getElementById('menu-carousel')
-    if (container) {
-      const scrollAmount = 400
-      const newPosition = direction === 'left' ? scrollPosition - scrollAmount : scrollPosition + scrollAmount
-      container.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' })
-      setScrollPosition(newPosition)
-    }
-  }
+
 
   return (
     <section className="py-2 md:py-10 px-4 sm:px-6  bg-secondary">
@@ -103,7 +95,7 @@ export function MenuShowcaseSection() {
           transition={{ duration: 0.6 }}
           className="flex flex-col md:flex-row md:items-center md:justify-between mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-muted">Our mission</h2>
+          <h2 className="text-4xl md:text-5xl  font-serif font-bold text-muted">Our mission</h2>
 
           {/* Tabs */}
           <div className="flex gap-8 ">
@@ -132,7 +124,7 @@ export function MenuShowcaseSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             id="menu-carousel"
-            className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-4"
           >
             {items.map((item, index) => (
               <motion.div
@@ -141,7 +133,7 @@ export function MenuShowcaseSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="mx-auto"
+                className="w-full"
               >
                 <ProductCard {...item} />
               </motion.div>
