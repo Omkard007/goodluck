@@ -1,8 +1,10 @@
+"use client"
 import { cn } from "@/lib/utils";
 import { Marquee } from "../ui/marquee";
 
 import {reviews} from "@/lib/reviews";
 import { Star } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
@@ -19,7 +21,7 @@ const ReviewCard = ({
   };
 }) => {
   return (
-    <div className="bg-card rounded-lg p-6 border border-border hover:shadow-lg hover:border-primary/30 transition-all w-[500px]">
+    <div className="bg-card rounded-lg p-6 border border-border hover:shadow-lg hover:border-primary/30 transition-all w-[300px] md:w-[500px]">
       <div className="flex items-start justify-between mb-4">
         <div>
           <h3 className="font-serif font-bold text-foreground mb-1">
@@ -33,7 +35,7 @@ const ReviewCard = ({
         <span className="text-xs text-foreground/50">{review.date}</span>
       </div>
 
-      <p className="text-foreground/80 leading-relaxed mb-4 italic">
+      <p className="text-foreground/80 leading-relaxed mb-4 italic text-xs md:text-sm">
         "{review.text}"
       </p>
 
@@ -52,18 +54,19 @@ const ReviewCard = ({
 };
 
 export function ReviewMarquee() {
+  const isMobile = useIsMobile()
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden my-20">
-      <h2 className="text-4xl md:text-5xl  font-serif font-bold text-primary mb-15">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl  font-serif font-bold text-primary mb-15 w-[80%] text-center">
         What Our Customers Say
       </h2>
 
-      <Marquee pauseOnHover className="[--duration:20s]">
+      <Marquee pauseOnHover className={isMobile ? "[--duration:30s]" : "[--duration:20s]"}>
         {firstRow.map((review) => (
           <ReviewCard key={review.id} review={review} />
         ))}
       </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
+      <Marquee reverse pauseOnHover className={isMobile ? "[--duration:30s]" : "[--duration:20s]"}>
         {secondRow.map((review) => (
           <ReviewCard key={review.id} review={review} />
         ))}

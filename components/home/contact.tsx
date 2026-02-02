@@ -1,5 +1,5 @@
 'use client'
-import Navbar from "../home/navbar2"
+import  Navbar  from '@/components/home/Navbar'
 import { motion } from 'framer-motion'
 import { MapPin, Clock, Phone, Mail } from 'lucide-react'
 import Cta from "../home/cta"

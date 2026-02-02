@@ -11,6 +11,7 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 import { Phone } from "lucide-react";
 import Link from "next/link";
@@ -18,7 +19,7 @@ import { useState } from "react";
 
 export default function GoodluckCafeNavbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+const isMobile = useIsMobile()
   const navItems = [
     { name: "Menu", link: "/menu" },
     { name: "About Us", link: "/about" },
@@ -27,7 +28,7 @@ export default function GoodluckCafeNavbar() {
   ];
 
   return (
-    <Navbar className="top-2">
+    <Navbar className={isMobile ? "top-0" : "top-2"}>
       {/* ================= DESKTOP ================= */}
       <NavBody>
         {/* Logo */}
@@ -57,6 +58,7 @@ export default function GoodluckCafeNavbar() {
         </MobileNavHeader>
 
         <MobileNavMenu
+        className="mx-2"
           isOpen={isMobileMenuOpen}
         >
           {navItems.map((item, idx) => (

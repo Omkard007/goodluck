@@ -4,7 +4,7 @@
 import { motion } from 'framer-motion'
 import { reviews } from '@/lib/reviews'
 import { Star, MessageSquare, Users } from 'lucide-react'
-import Navbar from "../home/navbar2"
+import  Navbar  from '@/components/home/Navbar'
 import Cta from "../home/cta"
 
 const fadeInUp = {

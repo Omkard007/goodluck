@@ -5,7 +5,7 @@ import Cta from "../home/cta2"
 import { motion } from 'framer-motion'
 import { Star, Search } from 'lucide-react'
 import { menuItems, categories } from '@/lib/menuData'
-import  Navbar from "../home/navbar2"
+import  Navbar  from '@/components/home/Navbar'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },

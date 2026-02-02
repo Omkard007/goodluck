@@ -85,7 +85,7 @@ export function MenuShowcaseSection() {
 
 
   return (
-    <section className="py-2 md:py-10 px-4 sm:px-6  bg-secondary">
+    <section className="py-10 md:py-10 px-4 sm:px-6  bg-secondary">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
@@ -93,9 +93,9 @@ export function MenuShowcaseSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col md:flex-row md:items-center md:justify-between mb-12"
+          className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 md:mb-12"
         >
-          <h2 className="text-4xl md:text-5xl  font-serif font-bold text-muted">Our mission</h2>
+          <h2 className="text-4xl md:text-5xl  font-serif font-bold text-muted mb-6">Our mission</h2>
 
           {/* Tabs */}
           <div className="flex gap-8 ">
@@ -103,7 +103,7 @@ export function MenuShowcaseSection() {
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`font-serif font-semibold text-lg transition-colors pb-2 border-b-2 ${
+                className={`font-serif font-semibold text-sm md:text-lg transition-colors pb-2 border-b-2 ${
                   activeCategory === category.id
                     ? 'text-muted border-accent'
                     : 'text-muted/60 border-transparent hover:text-muted/80'
@@ -124,7 +124,7 @@ export function MenuShowcaseSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             id="menu-carousel"
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-4"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  md:gap-6 pb-4"
           >
             {items.map((item, index) => (
               <motion.div

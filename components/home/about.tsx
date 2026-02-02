@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Heart, BookOpen, Users, Coffee } from "lucide-react";
-import Navbar from "../home/navbar2"
+import  Navbar  from '@/components/home/Navbar'
 import Cta from "../home/cta";
 const fadeInUp = {
     initial: { opacity: 0, y: 20 },
